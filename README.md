@@ -11,7 +11,7 @@ Java guys can still use their OnPremise Service Bus to develop/test their applic
 
 How It Works
 ============
-This library sings-along with existing Windows Azure APIs,so it doesnt make you write using different APIs.
+This library sings-along with existing Windows Azure APIs,so it doesnt make you code using different APIs than one provided by MS Windows Azure API.
 So how it works? well, Microsoft Azure API follows IOC/DI patterns to wire the things like connection management, 
 authentication etc. So this library creates a minimal required functionality, which is to pass correct parameters to SAS endpoint 
 and extract the required values from the reponse and pass it back to the caller, and extends few Azure API interfaces to 
