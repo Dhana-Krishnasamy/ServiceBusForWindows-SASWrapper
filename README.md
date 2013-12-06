@@ -13,14 +13,11 @@ How It Works
 ============
 This library sings-along with existing Windows Azure APIs,so it doesnt make you code using different APIs than one provided by MS Windows Azure API.
 So how it works? well, Microsoft Azure API follows IOC/DI patterns to wire the things like connection management, 
-authentication etc. So this library creates a minimal required functionality and extends few Azure API interfaces to 
-hook the new functionality in the flow. The required  functionality is to pass correct parameters to SAS endpoint 
-, extract the required values from the reponse , then pass it back to the caller.
+authentication etc. So this library hookes itself into the Azure API and takes care of getting the auth tokens from SAS endpoint.
 
 Main Bits
 =========
-SASRestProxy.java - Here is where the logic to send correct parameters to SAS endpoint and handling the respose id done. 
-This guy shadows WrapRestProxy.java in the Azure API.
+SASRestProxy.java - Here is where the logic to send correct parameters to SAS endpoint and handling the respose is done. This guy shadows WrapRestProxy.java (only deals with ACS Wrap tokens) in the Azure API.
 
 SASWrapperServiceContract.java - implements ServiceBusContract. This is the class which brings SASRestProxy in to the flow.
 This class decorates the ServiceBusRestProxy from the API, so that SASRestProxy is used for getting the access tokens. Except wiring SASRestProxy,
