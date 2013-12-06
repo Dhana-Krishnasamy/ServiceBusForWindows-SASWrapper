@@ -26,6 +26,15 @@ SASWrapperServiceContract.java - implements ServiceBusContract. This is the clas
 This class decorates the ServiceBusRestProxy from the API, so that SASRestProxy is used for getting the access tokens. Except wiring SASRestProxy,
 this class doent do any work and delegates everything to ServiceBusContract which the Azure API will create and inject at runtime.
 
+SASWrapperBuilder - This the DI guy, who registers all this library classes in to the IOC container (ServiceLoaded)
+
+SASFilter - shadows WrapFilter- only purpose to get the SASRestProxy into WrapFilter, rest of the code is same as WrapFilter.
+
+SASWrapperServiceBusConnectionSettings - shadows ServiceBusConnectionSettings, this is required as ServiceBusConnectionSettings is not public. Code looks sam as ServiceBusConnectionSettings.
+
+SASTokenManager - shadows WrapTokenManager - only purpose to get the SASRestProxy into WrapTokenManager and use SASWrapperServiceBusConnectionSettings, rest of the code is same as WrapTokenManager. This class could have been avoided if only ServiceBusConnectionSettings was public.
+
+
 
 This is for you
 ===============
