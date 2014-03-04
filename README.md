@@ -53,6 +53,10 @@ if you want to use this library, you just change the line 2 like below in your c
     	   
 and ofcouse include this lib as dependence in your pom file.
 
+License:
+========
+This library distributed under Apache 2.0 licnese (Open Source). Refer license.rtf for more details.
+
 P.S:
 ====
 This library is useful only if you want to deal with SB APIs directly / or want to use REST without JMS interface/AMQP. However on SB for Windows , 
