@@ -1,3 +1,9 @@
+/*
+ *  Copyright (c) Dhana Krishnasamy. All rights reserved.
+ *  License : Apache 2.0
+ * @author Dhana Krishnasamy
+ * 
+ */
 package com.dhana.servicebus.saswrapper;
 
 import static com.microsoft.windowsazure.services.core.utils.ExportUtils.getPropertyIfExists;
