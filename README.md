@@ -59,8 +59,7 @@ This library distributed under Apache 2.0 licnese (Open Source). Refer license.r
 
 P.S:
 ====
-This library is useful only if you want to deal with SB APIs directly / or want to use REST without JMS interface/AMQP. However on SB for Windows , 
-I couldnt get the Qpid to connect to SB endpoints (AMQP) (while the authentication works). 
+This library is useful when you want to deal with SB APIs directly / or want to use REST without JMS interface/AMQP. 
     	
     	
 
